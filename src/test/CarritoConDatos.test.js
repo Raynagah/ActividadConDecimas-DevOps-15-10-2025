@@ -10,7 +10,7 @@ describe("Componente Carrito", () => {
 		const mockContext = {
 			cart: [{ id: 1, nombre: "Producto 1", price: 10, quantity: 1 }],
 			total: 10,
-			clearCart: jasmine.createSpy("clearCart"),
+			clearCart: jest.fn(), // Cambiado a la sintaxis de Jest,
 		};
 
 		render(

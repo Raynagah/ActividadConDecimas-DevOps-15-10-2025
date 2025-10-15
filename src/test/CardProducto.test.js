@@ -9,12 +9,14 @@ describe("CardProducto", () => {
 
 	beforeEach(() => {
 		// Creamos mocks para las funciones y datos
-		mockAddToCart = jasmine.createSpy("addToCart");
+		mockAddToCart = jest.fn();
+        
+		// --- CORRECCIÓN AQUÍ ---
 		mockProduct = {
 			id: 1,
 			name: "Producto Test",
 			price: 1500,
-			image: "imagen.png",
+			image: "imagen.png"
 		};
 
 		// Renderizamos el componente con un contexto simulado
@@ -30,12 +32,13 @@ describe("CardProducto", () => {
 	});
 
 	it("debe mostrar el nombre, precio e imagen del producto", () => {
-		expect(screen.getByText("Producto Test")).not.toBeNull();
-		expect(screen.getByText("$1500")).not.toBeNull();
+		// Usar .toBeInTheDocument() es una mejor práctica con @testing-library/jest-dom
+		expect(screen.getByText("Producto Test")).toBeInTheDocument();
+		expect(screen.getByText("$1500")).toBeInTheDocument();
 
 		const image = screen.getByAltText("Producto Test");
-		expect(image).not.toBeNull();
-		expect(image.getAttribute("src")).toBe("imagen.png");
+		expect(image).toBeInTheDocument();
+		expect(image).toHaveAttribute("src", "imagen.png");
 	});
 
 	it("debe llamar a addToCart con el producto al hacer clic", () => {
