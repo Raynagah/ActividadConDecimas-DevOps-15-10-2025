@@ -1,0 +1,40 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-INFLIGHT-6095116:
+    - '*':
+        reason: Aceptado para práctica
+        expires: 2025-11-14T21:24:16.229Z
+        created: 2025-10-15T21:24:16.230Z
+  SNYK-JS-NTHCHECK-1586032:
+    - '*':
+        reason: Aceptado para práctica
+        expires: 2025-11-14T21:24:33.860Z
+        created: 2025-10-15T21:24:33.863Z
+  SNYK-JS-POSTCSS-5926692:
+    - '*':
+        reason: Aceptado para práctica
+        expires: 2025-11-14T21:24:39.035Z
+        created: 2025-10-15T21:24:39.039Z
+  SNYK-JS-SERIALIZEJAVASCRIPT-6147607:
+    - '*':
+        reason: Aceptado para práctica
+        expires: 2025-11-14T21:24:45.492Z
+        created: 2025-10-15T21:24:45.495Z
+  SNYK-JS-WEBPACKDEVSERVER-10300775:
+    - '*':
+        reason: Aceptado para práctica
+        expires: 2025-11-14T21:24:51.288Z
+        created: 2025-10-15T21:24:51.292Z
+  SNYK-JS-WEBPACKDEVSERVER-10300777:
+    - '*':
+        reason: Aceptado para práctica
+        expires: 2025-11-14T21:24:56.943Z
+        created: 2025-10-15T21:24:56.947Z
+  'snyk:lic:npm:axe-core:MPL-2.0':
+    - '*':
+        reason: Aceptado para práctica
+        expires: 2025-11-14T21:25:03.152Z
+        created: 2025-10-15T21:25:03.157Z
+patch: {}
