@@ -46,4 +46,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/mi-app-nodejs:latest # Reemplaza 'mi-app-nodejs'
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/actividad-con-decimas:latest # Reemplaza 'mi-app-nodejs'
